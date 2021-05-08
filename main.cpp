@@ -1,15 +1,34 @@
+//#include <QCoreApplication>
+#include <QApplication>
+//#include <QTextStream>
 #include <iostream>
+#include "book.h"
+#include "bookinput.h"
+#include "bookwriter.h"
 
-using namespace std;
+//QTextStream cout(stdout);
+//QTextStream cin(stdin);
 
-int main()
+int main(int argc, char *argv[])
 {
-    cout << "Hellos Zander" << endl;
+//    using namespace std;
+    QApplication app(argc, argv);
+//    app.setApplicationName("Books");
 
-    int age;
-    cin >> age;
 
-    cout << "\n Hello Zander met ouderdom" << age << " #WINK " << endl;
+//    using namespace std;
+//    int enter;
+//    cout << "Test: ";
+//    cin >> enter;
 
-    return 0;
+
+//    Book atest;
+//    BookWriter bw("test.txt");
+//    bw.write(atest);
+
+    BookInput bi;
+    bi.show();
+
+
+    return app.exec();
 }
